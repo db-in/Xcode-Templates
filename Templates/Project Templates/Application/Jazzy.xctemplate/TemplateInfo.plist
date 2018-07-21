@@ -16,7 +16,7 @@
 	<key>Macros</key>
 	<dict>
 		<key>JAZZYSCRIPT</key>
-		<string>jazzy</string>
+		<string>jazzy --podspec "___PACKAGENAME___.podspec" --github_url "___VARIABLE_gitURL___"</string>
 	</dict>
 
 	<!-- Adding Files -->
@@ -74,7 +74,6 @@
 				</dict>
 			</array>
 		</dict>
-
 	</array>
 
 </dict>

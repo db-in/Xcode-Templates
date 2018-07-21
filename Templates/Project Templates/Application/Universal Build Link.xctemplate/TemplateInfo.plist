@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.UniversalBuildLink</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<!-- User Options -->
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>universalBuild</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>Description</key>
+			<string>Adds the universal build script as a separated target</string>
+			<key>Name</key>
+			<string>Includes Universal build script</string>
+			<key>SortOrder</key>
+			<integer>3</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>NotPersisted</key>
+			<false/>
+			<key>Units</key>
+			<dict>
+
+				<key>true</key>
+				<dict>
+
+					<key>Components</key>
+					<array>
+						<dict>
+							<key>Identifier</key>
+							<string>com.micro-feature.UniversalBuild</string>
+							<key>Name</key>
+							<string>Universal</string>
+						</dict>
+					</array>
+
+				</dict>
+
+				<key>false</key>
+				<dict>
+				</dict>
+
+			</dict>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

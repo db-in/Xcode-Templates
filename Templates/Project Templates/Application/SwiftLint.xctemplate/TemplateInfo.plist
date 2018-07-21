@@ -57,7 +57,7 @@ fi</string>
 			<key>Default</key>
 			<string>SwiftLint on every build</string>
 			<key>Description</key>
-			<string>Installs the SwiftLint script, which checks the code against our Code Guidelines compliance</string>
+			<string>Installs the SwiftLint script, which checks the code syntax accordingly to the Best Practices</string>
 			<key>Name</key>
 			<string>SwiftLint</string>
 			<key>SortOrder</key>
