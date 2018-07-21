@@ -9,11 +9,11 @@
 	<array>
 		<string>com.micro-feature.Base</string>
 		<string>com.micro-feature.SwiftPackage</string>
-		<string>com.micro-feature.Jazzy</string>
 		<string>com.micro-feature.SwiftLint</string>
+		<string>com.micro-feature.Playground</string>
 		<string>com.micro-feature.TravisCodecov</string>
 		<string>com.micro-feature.Codebeat</string>
-		<string>com.micro-feature.Playground</string>
+		<string>com.micro-feature.JazzyLink</string>
 		<string>com.micro-feature.UniversalBuildLink</string>
 	</array>
 
@@ -53,7 +53,7 @@
 			<key>Type</key>
 			<string>text</string>
 			<key>Placeholder</key>
-			<string>https://github.com/___ORGANIZATIONNAME___/___PACKAGENAME___</string>
+			<string>https://github.com/mybrand/myframework</string>
 		</dict>
 
 	</array>

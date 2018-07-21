@@ -5,7 +5,7 @@
 	<!-- Header -->
 
 	<key>Identifier</key>
-	<string>com.micro-feature.UniversalBuildLink</string>
+	<string>com.micro-feature.JazzyLink</string>
 
 	<key>Kind</key>
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
@@ -17,13 +17,13 @@
 
 		<dict>
 			<key>Identifier</key>
-			<string>universalBuild</string>
+			<string>jazzy</string>
 			<key>Default</key>
 			<string>true</string>
 			<key>Description</key>
-			<string>Adds the universal build script as a separated target</string>
+			<string>Adds the Jazzy script as a target (Apple Doc Style)</string>
 			<key>Name</key>
-			<string>Include Universal build script</string>
+			<string>Include Jazzy script</string>
 			<key>SortOrder</key>
 			<integer>3</integer>
 			<key>Type</key>
@@ -40,9 +40,9 @@
 					<array>
 						<dict>
 							<key>Identifier</key>
-							<string>com.micro-feature.UniversalBuild</string>
+							<string>com.micro-feature.Jazzy</string>
 							<key>Name</key>
-							<string>Universal</string>
+							<string>Jazzy</string>
 						</dict>
 					</array>
 

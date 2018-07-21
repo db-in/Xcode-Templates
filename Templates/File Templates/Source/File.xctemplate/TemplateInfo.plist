@@ -50,7 +50,7 @@
 			<key>Description</key>
 			<string>The author's name or the pair's name</string>
 			<key>Default</key>
-			<string>Emirates</string>
+			<string>___FULLUSERNAME___</string>
 			<key>Type</key>
 			<string>text</string>
 		</dict>

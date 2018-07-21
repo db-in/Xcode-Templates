@@ -1,60 +1,81 @@
 # ___PACKAGENAME___
 
-![POD](https://img.shields.io/badge/Coverage-100%25-green.svg)
-![POD](https://img.shields.io/badge/swift-3.2-blue.svg)
+[![Build Status](https://travis-ci.org/___ORGANIZATIONNAME___/___PACKAGENAME___.svg?branch=master)](https://travis-ci.org/___ORGANIZATIONNAME___/___PACKAGENAME___)
+[![codecov](https://codecov.io/gh/___ORGANIZATIONNAME___/___PACKAGENAME___/branch/master/graph/badge.svg)](https://codecov.io/gh/___ORGANIZATIONNAME___/___PACKAGENAME___)
+[![codebeat badge](https://codebeat.co/badges/5563135f-7e49-4e66-aa44-b4f6fbb9b331)](https://codebeat.co/projects/github-com-___ORGANIZATIONNAME___-___PACKAGENAME___-master)
+![Version](https://img.shields.io/badge/swift-4.1-red.svg)
+[![Platform](https://img.shields.io/cocoapods/p/___PACKAGENAME___.svg?style=flat)](https://___ORGANIZATIONNAME___.github.io/___PACKAGENAME___)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/___PACKAGENAME___.svg)](https://img.shields.io/cocoapods/v/___PACKAGENAME___.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-# Description
-**___PACKAGENAME___** is a framework for ... `make an introduction for this component. Explaining the major business goals.`
+## Description
+**___PACKAGENAME___** is a framework...
 
 **Features**
 
-* Feature 1
-* Feature 2
-* Feature 3
+- [x] Automatically creates Markov Chain based on a given sequence of transactions;
+- [x] Allows manual matrix manipulation for mutating members;
+- [x] Pretty printed matrix for debugging;
 
-# Installation
+## Installation
 
-#### CocoaPods:
-[CocoaPods](https://guides.cocoapods.org/using/getting-started.html) is a dependency manager for Cocoa projects. You can get more information about how to use it on [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
+### Using [CocoaPods](https://cocoapods.org)
 
-Once you ready with CocoaPods, use this code in your `Podfile`:
+Add to your **Podfile** file
 
 ```
-source 'https://git.emirates.com/scm/ema/cocoapodsspecs.git'
-
-use_frameworks!
-
 pod '___PACKAGENAME___'
 ```
 
-# Requirements
-Version | Language | Xcode | iOS
-------- | -------- | ----- | ---
- 1.0.0  | Swift 3.2  |  9.0  | 10.0
+### Using [Carthage](https://github.com/Carthage/Carthage)
 
-# Programming Guide
-This section intends to give an overview about this component and its usage. Not all features included in this component will be covered here. The focus of this section will be:
+Add to your **Cartfile** or **Cartfile.private** file
 
-* Initialization
-* Feature-1
-* Feature-2
-* Feature-3
+```
+github "___ORGANIZATIONNAME___/___PACKAGENAME___"
+```
+
+### Using [Swift Package Manager](https://swift.org/package-manager)
+
+Add to your **Package.swift** file
+
+```swift
+let package = Package(
+    name: "myproject",
+    dependencies: [
+        .package(url: "___VARIABLE_gitURL___"),
+    ],
+    targets: [
+        .target(
+            name: "myproject",
+            dependencies: ["___PACKAGENAME___"]),
+    ]
+)
+```
+
+## Programming Guide
+The features are:
+
+- Initialization
+- Feature-1
+- Feature-2
+- Feature-3
 
 #### Initialization
 Start by importing the package in the file you want to use it.
 
-```
+```swift
 import ___PACKAGENAME___
 ```
 
 #### Feature-1
 Describe usage of Feature-1
 
-```
+```swift
 // Some code for Feature-1
 ```
 
-# FAQ
+## FAQ
 > Possible Question-1?
 
 - Answer for Question-1

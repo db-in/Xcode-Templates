@@ -23,7 +23,7 @@ For vector images, use the [vector graphics (PDFs)][vector-assets] into the asse
 	    ├─ Colors
 	    ├─ Backgrounds
 	    	    ├─ bkgAssetName
-	    	    
+
 
 [vector-assets]: http://martiancraft.com/blog/2014/09/vector-images-xcode6/
 [asset-catalogs]: https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/Recipe.html
@@ -67,7 +67,7 @@ class ClassA : NSObject {
 
 <pre style="background:#F9E2E4;border-color:#F6B7BE;border-left:6px #EF5138 solid;">
 class ClassA: NSObject {
-	
+
 	var foo:String
 }
 </pre>
@@ -122,7 +122,7 @@ Dispatch.main.async { doSomething(); doSomethingElse(); }
 var cardHolderView: UIView?
 var rolesTableView: UITableView?
 private var roles: [(user: User, role: Role)]?
-	
+
 func makeUserRoles(for user: User, withOption: Option) -> [UserRole]
 
 func centered() -> Self
@@ -148,17 +148,17 @@ mutating func centering(at view: UIView)
 * If it's necessary to break lines due to the line length, keep the consistency by break one parameter per line, instead of clustering them
 
 <pre style="background:#E6FFE5;border-color:#63D25C;border-left:6px #63D25C solid;">
-func makeUserToken(for number: inout String, 
-                   username:String, 
-                   role:String = "Default", 
-                   completion: @escape (() -> Void), 
+func makeUserToken(for number: inout String,
+                   username:String,
+                   role:String = "Default",
+                   completion: @escape (() -> Void),
                    options:String...) -> String {
 		// ...
 }
 </pre>
 
 <pre style="background:#F9E2E4;border-color:#F6B7BE;border-left:6px #EF5138 solid;">
-func foo(varA:String, varB:String = "Default", 
+func foo(varA:String, varB:String = "Default",
          varC:()->Void, inout varD:String, variadic:String...) -> String {
 		// ...
 }
@@ -188,15 +188,15 @@ var foo = anotherBoolVar ? (boolVar ? 1 : 2) : 3
 func fooGlobal() {
 	// ...
 }
-	
+
 class FooClass {
 	func foo() {
 		// ...
 	}
-	
+
 	func test() {
 		foo()
-		
+
 		Dispatch.main.async {
 			self.foo()
 		}
@@ -208,12 +208,12 @@ class FooClass {
 func foo() {
 	// ...
 }
-	
+
 class Foo {
 	func foo() {
 		// ...
 	}
-	
+
 	func test() {
 		foo()
 	}
@@ -269,19 +269,19 @@ class UserModel {
 	var password: String = ""
 	var phone: String?
 
-	var emiratesID: String? {
+	var composedID: String? {
 		guard userID = id else {
 			return nil
 		}
-		
+
 		return "ek" + userID
 	}
-		
+
 	func phoneNumber(isLocalized: Bool) -> String? {
 		guard userPhone = phone else {
             return nil
         }
-        
+
 		return "971" + userPhone
 	}
 }
@@ -293,11 +293,11 @@ class UserModel {
 	var username: String?
 	var password: String?
 	var phone: String!
-	
-	var emiratesID: String {
+
+	var composedID: String {
 		return "ek" + (userID ?? "")
 	}
-	
+
 	func phoneNumber(isLocalized: Bool) -> String {
 		return "971" + phone
 	}
@@ -320,7 +320,7 @@ func fooReturning() throws -> String {
 	guard condition else {
 	    // return or throw
 	}
-	
+
 	// Some other logic
 }
 </pre>
@@ -330,7 +330,7 @@ func fooReturning() throws -> String {
 	if let optionalBinding = someOptional {
 	    // ...
 	}
-	
+
 	return ""
 }
 </pre>
@@ -380,11 +380,11 @@ class RouteViewController : UIViewController, UITableViewDataSource, Routable {
 	var currentPoint: Point {
 		return Point()
 	}
-	
+
 	func makeNewRoute(to: Point) -> Route {
 		// ...
 	}
-	
+
 	tableView(...)
 }
 </pre>
@@ -407,7 +407,7 @@ class RouteViewController : UIViewController, UITableViewDataSource, Routable {
 ...
 920. }
 ...
-2130. 
+2130.
 </pre>
 
 ### Access Controls
@@ -449,7 +449,7 @@ open class B {
 
 class OrdinaryClass {
 
-	private func fooToPrivateUse() {...}	
+	private func fooToPrivateUse() {...}
 	func fooToGlobalUse() {...}
 }
 </pre>
@@ -482,7 +482,7 @@ public class OrdinaryClass {
 ### Unit Tests
 
 * No business logic should reside in views or view controllers. ViewModels or Logic Objects should be created to hold and contain all the logic. So they are not tied to any presentation layer and can be easily tested.
-* Business-related code includes: 
+* Business-related code includes:
 	* Business logic (i.e. story acceptance criteria)
 	* Field/form validation
 	* Helper functions
@@ -492,30 +492,30 @@ public class OrdinaryClass {
 	* UI setup, fonts, colors, etc.
 	* TableView and CollectionView DataSource and Delegate
 	* View controller setup
-	
+
 * Unit tests should NOT cover:
 	* Displayed local-language text
-	
+
 * For Mocking API responses, local JSONs or related files should be used. All the local JSONs should be embedded as Git Submodule or Subtree.
 * For Mocking Singletons inside object, preferably expose then as dependency injection and make the production Singleton as the default, so the Unit Test can replaced it if needed.
 * Naming:
 	* It has to answer 3 questions: **What? How? Why?**
 	* XCTest syntax: testUnitOfWork_StateUnderTest_ExpectedBehavior
-	* Quick BDD syntax: Should always include the 3 levels: 
+	* Quick BDD syntax: Should always include the 3 levels:
 ```
 describe("UnitOfWork") {
 	context("StateUnderTest") {
 		it("ExpectedBehavior") {
 ```
-* Orient the test towards behaviors. If 1 method has 2 possible behaviors, create 2 tests then. If a chain of 4 methods has only 1 possible behaviors, write only 1 test. **IMPORTANT**: Behavior is not the same as result. The following function has 2 behaviors with N results: 
+* Orient the test towards behaviors. If 1 method has 2 possible behaviors, create 2 tests then. If a chain of 4 methods has only 1 possible behaviors, write only 1 test. **IMPORTANT**: Behavior is not the same as result. The following function has 2 behaviors with N results:
 
 ```
-func upperFoo(param: String?) -> String { 
-	guard let string = param else { 
+func upperFoo(param: String?) -> String {
+	guard let string = param else {
 		return ""
 	}
-	
-	return param.upperCased() 
+
+	return param.upperCased()
 }
 ```
 * Test Coverage: The coverage should focus on the business logic. The coverage must aim for more than 80% coverage on this part.
@@ -526,7 +526,7 @@ extension MyServiceServerProtocol {
 	func fetch() -> Response {
 		let json = try! JSON(fromFile: "aMockFile.json")
 		let response = try! Response(json: json)
-		
+
 		return .sucess(response: response)
 	}
 }
@@ -546,7 +546,7 @@ describe("for every user") {
 		// expectations go here
 		let vc = storyboard.instantiateViewController(withIdentifier: "id") as! MyViewController
 		_ = vc.view
-		
+
 		vc.someMethodAtVC()
 	}
 }
@@ -558,7 +558,7 @@ describe("for every user") {
 ![File Template](assets/file_template2.png)
 ![File Template](assets/file_template3.png)
 
-The Emirates templates provides a starting point to enforce the Best Practices on this document. The Xcode templates are flexible enough to allow the creation of clusters/groups of files when needed. For example if a template for the interface requires a `.swift` + `.storyboard` file.
+The Xcode templates provides a starting point to enforce the Best Practices on this document. The Xcode templates are flexible enough to allow the creation of clusters/groups of files when needed. For example if a template for the interface requires a `.swift` + `.storyboard` file.
 
 * All files follows the guides defined in the templates (explained in details at bellow);
 * Templates defines various marks, which defines the ideal place in the files to insert chunks of code such as properties, protected functions, exposed functions, overriding functions, definitions, declarations, etc;
@@ -591,7 +591,7 @@ class Foo {
 // MARK: - Properties
 
 
-// All properties: 
+// All properties:
 1) private properties
 2) fileprivate properties
 3) internal properties (IBOutlet, includes overriden)
@@ -601,7 +601,7 @@ class Foo {
 // MARK: - Constructors
 
 
-// Constructors 
+// Constructors
 1) convinience
 2) designated
 3) required
@@ -610,7 +610,7 @@ class Foo {
 // MARK: - Overridden Methods
 
 
-// Methods: 
+// Methods:
 1) internal (IBAction, class/static)
 2) public (IBAction, class/static)
 2) open (IBAction, class/static)
@@ -619,7 +619,7 @@ class Foo {
 // MARK: - Protected Methods
 
 
-// Methods: 
+// Methods:
 1) private
 2) fileprivate
 3) class/static
@@ -628,7 +628,7 @@ class Foo {
 // MARK: - Exposed Methods
 
 
-// Methods: 
+// Methods:
 1) internal (IBAction, class/static)
 2) public (IBAction, class/static)
 2) open (IBAction, class/static)

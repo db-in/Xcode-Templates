@@ -1,8 +1,0 @@
-author: ___ORGANIZATIONNAME___
-author_url: http://___ORGANIZATIONNAME___
-github_url: https://github.com/___ORGANIZATIONNAME___/___PACKAGENAME___
-root_url: https://___ORGANIZATIONNAME___.github.io/___PACKAGENAME___
-module: ___PACKAGENAME___
-output: docs
-theme: apple
-xcodebuild_arguments: [-workspace, '___PACKAGENAME___.xcworkspace', -scheme, '___PACKAGENAME___']

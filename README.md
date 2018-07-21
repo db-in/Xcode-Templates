@@ -2,7 +2,7 @@
 
 ## Description
 
-This is part of the [Emirates iOS Team Best Practices and Guidelines](best-practices.md), check that document for further details. The **Xcode Templates & Tooling** will help you to install:
+This is part of the [iOS Best Practices and Guidelines](best-practices.md), check that document for further details. The **Xcode Templates & Tooling** will help you to install:
 
 - Xocde Templates
 - Xcode Code Snippets
@@ -13,7 +13,7 @@ This is part of the [Emirates iOS Team Best Practices and Guidelines](best-pract
 Double click on `install.command` file and enter your **machine admin password**.
 The installation process will copy and paste files in the right folders in order to have a local copy in the file system.
 
-Same process of installing. Running the `install.command` is required everytime the git repository receives an update. The script will show you logs of the installation.
+Same process of installing. Running the `install.command` is required every time the git repository receives an update. The script will show you logs of the installation.
 
 ![Workspace](assets/terminal.png)
 
@@ -29,8 +29,8 @@ Also some code snippets will be added to your local Xcode.
 
 Shortcut | Level | Description
 ------- | -------- | -----
+mark-extension | Top | Creates a new extension mark
 describe-context-it | Function | Creates a "describe-context-it" case for BDD syntax
-
 
 ## Key Bindings (Shortcuts)
 

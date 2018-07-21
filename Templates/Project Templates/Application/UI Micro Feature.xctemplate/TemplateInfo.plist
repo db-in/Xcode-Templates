@@ -9,11 +9,12 @@
 	<array>
 		<string>com.micro-feature.UIBase</string>
 		<string>com.micro-feature.SwiftPackage</string>
-		<string>com.micro-feature.Jazzy</string>
 		<string>com.micro-feature.SwiftLint</string>
+		<string>com.micro-feature.Playground</string>
 		<string>com.micro-feature.TravisCodecov</string>
 		<string>com.micro-feature.Codebeat</string>
-		<string>com.micro-feature.Playground</string>
+		<string>com.micro-feature.JazzyLink</string>
+		<string>com.micro-feature.UniversalBuildLink</string>
 	</array>
 
 	<key>Platforms</key>
@@ -57,7 +58,7 @@
 			<key>Type</key>
 			<string>text</string>
 			<key>Placeholder</key>
-			<string>https://git.emirates.com/scm/ema/parsable.git</string>
+			<string>https://github.com/mybrand/myframework</string>
 		</dict>
 
 	</array>
