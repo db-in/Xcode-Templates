@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+
+	<key>Description</key>
+	<string>A Code file organized with Xcode Macros and comments. Includes Swift and Objective-C versions.</string>
+
+	<key>Summary</key>
+	<string>A Cocoa Touch class</string>
+
+  <key>SortOrder</key>
+  <string>0</string>
+
+	<key>DefaultCompletionName</key>
+	<string>MyClass</string>
+
+	<key>MainTemplateFiles</key>
+	<string>___FILEBASENAME___.swift</string>
+
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>File:</string>
+			<key>Description</key>
+			<string>The name of the class to create</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>authors</string>
+			<key>Name</key>
+			<string>Authors:</string>
+			<key>Description</key>
+			<string>The author's name or the pair's name</string>
+			<key>Default</key>
+			<string>Emirates</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>fileType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>File Type:</string>
+			<key>Description</key>
+			<string>The main type in this file</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>struct</string>
+			<key>Values</key>
+			<array>
+				<string>Enum</string>
+				<string>Struct</string>
+				<string>Class</string>
+				<string>Protocol</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>Typed</string>
+			<key>Name</key>
+			<string>Implements another type?</string>
+			<key>Description</key>
+			<string>The associated or parent type</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>extendedType</string>
+			<key>Name</key>
+			<string>Implements:</string>
+			<key>Description</key>
+			<string>Defines the parrent/associated type</string>
+			<key>Default</key>
+			<string>NSObject</string>
+			<key>Type</key>
+			<string>class</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>Typed</key>
+				<array>
+					<string>true</string>
+				</array>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>extensionOf</string>
+			<key>Name</key>
+			<string>Extension of:</string>
+			<key>Description</key>
+			<string>Defines the type to be extended</string>
+			<key>Default</key>
+			<string>String</string>
+			<key>Type</key>
+			<string>class</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>fileType</key>
+				<array>
+					<string>Extension</string>
+				</array>
+			</dict>
+		</dict>
+
+	</array>
+</dict>
+</plist>

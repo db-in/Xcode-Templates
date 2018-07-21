@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.Base</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+		<string>com.apple.platform.macosx</string>
+		<string>com.apple.platform.appletvos</string>
+		<string>com.apple.platform.watchos</string>
+	</array>
+
+	<!-- User Options -->
+
+	<key>AssociatedTargetSpecification</key>
+	<dict>
+		<key>AllowableProductTypes</key>
+		<array>
+			<string>com.apple.product-type.application</string>
+		</array>
+		<key>AssociatedTargetIsDependent</key>
+		<true/>
+		<key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+		<true/>
+		<key>PopUpDescription</key>
+		<string>The application target that will host this new framework. The application will be set up to link to and embed the new framework.</string>
+		<key>PopUpTitle</key>
+		<string>Embed in Application:</string>
+	</dict>
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Description</key>
+			<string>Your new product&apos;s name.</string>
+			<key>EmptyReplacement</key>
+			<string>ProductName</string>
+			<key>Name</key>
+			<string>Framework's Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>organizationName</string>
+			<key>Name</key>
+			<string>Organization Name:</string>
+			<key>Description</key>
+			<string>Your company&apos;s name</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>___ORGANIZATIONNAME___</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>bundleIdentifier</string>
+			<key>Default</key>
+			<string>com.micro-feature.___VARIABLE_productName:RFC1034Identifier___</string>
+			<key>Description</key>
+			<string>Your new product&apos;s bundle identifier.</string>
+			<key>Name</key>
+			<string>Bundle Identifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+
+	</array>
+
+	<!-- Project Settings -->
+
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Debug</key>
+			<dict>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<string>DEBUG</string>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+			</dict>
+			<key>Release</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>NO</string>
+			</dict>
+		</dict>
+
+		<key>SharedSettings</key>
+		<dict>
+			<key>VERSIONING_SYSTEM</key>
+			<string>apple-generic</string>
+			<key>CURRENT_PROJECT_VERSION</key>
+			<string>1</string>
+			<key>VERSION_INFO_PREFIX</key>
+			<string></string>
+			<key>GCC_THUMB_SUPPORT</key>
+			<string>YES</string>
+			<key>GCC_C_LANGUAGE_STANDARD</key>
+			<string>gnu99</string>
+			<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+			<string>YES</string>
+			<key>GCC_WARN_UNUSED_VARIABLE</key>
+			<string>YES</string>
+			<key>CLANG_ENABLE_MODULES</key>
+			<string>YES</string>
+			<key>CLANG_ENABLE_CODE_COVERAGE</key>
+			<string>YES</string>
+			<key>DEFINES_MODULE</key>
+			<string>YES</string>
+			<key>GCC_VERSION</key>
+			<string>com.apple.compilers.llvm.clang.1_0</string>
+			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+			<string>latest_iphoneos</string>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
+			<key>SWIFT_VERSION</key>
+			<string>3.0</string>
+		</dict>
+
+		<key>SDK</key>
+		<string>iphoneos</string>
+	</dict>
+
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<!-- Groups -->
+
+		<!-- Files -->
+
+		<key>../.gitignore</key>
+		<dict>
+			<key>Path</key>
+			<string>.gitignore</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+		<key>Info.plist</key>
+		<dict>
+			<key>Path</key>
+			<string>Info.plist</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+		<key>___PACKAGENAME___.h</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAME___.h</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+			<key>BuildAttributes</key>
+			<array>
+				<string>Public</string>
+			</array>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>../.gitignore</string>
+		<string>Info.plist</string>
+		<string>___PACKAGENAME___.h</string>
+	</array>
+
+	<!-- Targets and Frameworks -->
+
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.framework</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>___VARIABLE_productName:RFC1034Identifier___/Info.plist</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Headers</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Resources</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+
+</dict>
+</plist>

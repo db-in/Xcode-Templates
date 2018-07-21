@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+
+	<key>Description</key>
+	<string>A Code file organized with Xcode Macros and comments. Includes Swift and Objective-C versions.</string>
+
+	<key>Summary</key>
+	<string>A Cocoa Touch class</string>
+
+  <key>SortOrder</key>
+  <string>0</string>
+
+	<key>DefaultCompletionName</key>
+	<string>FileName</string>
+
+	<key>MainTemplateFiles</key>
+	<string>___FILEBASENAME___.swift</string>
+
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>File:</string>
+			<key>Description</key>
+			<string>The name of the class to create</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>authors</string>
+			<key>Name</key>
+			<string>Authors:</string>
+			<key>Description</key>
+			<string>The author's name or the pair's name</string>
+			<key>Default</key>
+			<string>Emirates</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>serviceURL</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>Service path:</string>
+			<key>Description</key>
+			<string>The service URL path</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>secure/DeviceServices/v1.1.0/notificationsettings</string>
+		</dict>
+	</array>
+</dict>
+</plist>

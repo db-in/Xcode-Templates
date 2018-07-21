@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.Playground</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<!-- User Options -->
+
+	<!-- Adding Files -->
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>playground</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>Description</key>
+			<string>Adds a playground file to the project</string>
+			<key>Name</key>
+			<string>Playground file</string>
+			<key>SortOrder</key>
+			<integer>2</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>NotPersisted</key>
+			<false/>
+			<key>Units</key>
+			<dict>
+
+				<key>true</key>
+				<dict>
+
+					<key>Definitions</key>
+					<dict>
+						<key>../___PACKAGENAME___.playground</key>
+						<dict>
+							<key>Path</key>
+							<string>___PACKAGENAME___.playground</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+					</dict>
+
+					<key>Nodes</key>
+					<array>
+						<string>../___PACKAGENAME___.playground</string>
+					</array>
+
+				</dict>
+
+				<key>false</key>
+				<dict>
+				</dict>
+
+			</dict>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

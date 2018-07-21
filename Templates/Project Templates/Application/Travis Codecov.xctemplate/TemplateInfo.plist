@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.TravisCodecov</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>travisci</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>Description</key>
+			<string>Adds the Travis-CI and Codecov files to the project</string>
+			<key>Name</key>
+			<string>Travis-CI + Codecov</string>
+			<key>SortOrder</key>
+			<integer>2</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>NotPersisted</key>
+			<false/>
+			<key>Units</key>
+			<dict>
+
+				<key>true</key>
+				<dict>
+					<!-- Adding Files -->
+
+					<key>Definitions</key>
+					<dict>
+						<key>../.travis.yml</key>
+						<dict>
+							<key>Path</key>
+							<string>.travis.yml</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+						<key>../codecov.yml</key>
+						<dict>
+							<key>Path</key>
+							<string>codecov.yml</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+					</dict>
+
+					<key>Nodes</key>
+					<array>
+						<string>../.travis.yml</string>
+						<string>../codecov.yml</string>
+					</array>
+
+				</dict>
+
+				<key>false</key>
+				<dict>
+				</dict>
+
+			</dict>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

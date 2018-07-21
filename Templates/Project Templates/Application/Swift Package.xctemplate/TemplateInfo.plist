@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.SwiftPackage</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<key>../Package.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>Package.swift</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>../Package.swift</string>
+	</array>
+
+</dict>
+</plist>

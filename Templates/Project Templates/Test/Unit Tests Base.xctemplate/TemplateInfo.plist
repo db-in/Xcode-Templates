@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Identifier</key>
+	<string>com.micro-feature.UnitTests</string>
+
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.bundleBase</string>
+		<string>com.apple.dt.unit.iosBase</string>
+	</array>
+
+	<key>Concrete</key>
+	<true/>
+	<key>TargetOnly</key>
+	<true/>
+
+	<key>Description</key>
+	<string>This target builds a unit test bundle that uses the XCTest framework.</string>
+	<key>SortOrder</key>
+	<integer>0</integer>
+
+	<key>AssociatedTargetSpecification</key>
+	<dict>
+		<key>PopUpTitle</key>
+		<string>Target to be Tested:</string>
+		<key>PopUpDescription</key>
+		<string>The target that this new test bundle will be testing. The new unit test will be associated with that target's scheme.</string>
+		<key>AllowableProductTypes</key>
+		<array>
+			<string>com.apple.product-type.application</string>
+			<string>com.apple.product-type.framework</string>
+			<string>com.apple.product-type.library.dynamic</string>
+			<string>com.apple.product-type.library.static</string>
+		</array>
+		<key>AllowablePlatforms</key>
+		<array>
+			<string>com.apple.platform.iphoneos</string>
+		</array>
+		<key>AssociatedTargetIsTargetToBeTested</key>
+		<true/>
+	</dict>
+
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>TargetIdentifier</key>
+			<string>com.micro-feature.UnitTestsTarget</string>
+			<key>ProductType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+			<key>Configurations</key>
+			<dict>
+				<key>Debug</key>
+				<dict/>
+				<key>Release</key>
+				<dict/>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Resources</string>
+				</dict>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_CODE_COVERAGE</key>
+				<string>YES</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+			</dict>
+		</dict>
+	</array>
+
+	<key>Nodes</key>
+    <array>
+        <string>Info.plist:PackageType</string>
+        <string>___PACKAGENAME___Spec.swift</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:PackageType</key>
+        <string><![CDATA[<key>CFBundlePackageType</key>
+<string>BNDL</string>
+]]></string>
+		<key>___PACKAGENAME___Spec.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.swift</string>
+        </dict>
+	</dict>
+
+	<key>OptionConstraints</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>ConstraintType</key>
+			<string>DefaultIfAssociatedTarget</string>
+			<key>Value</key>
+			<string>___ASSOCIATEDTARGET_bundleName___Spec</string>
+		</dict>
+	</array>
+</dict>
+</plist>

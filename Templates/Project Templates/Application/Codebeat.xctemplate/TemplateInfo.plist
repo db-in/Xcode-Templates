@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.Codebeat</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>codebeat</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>Description</key>
+			<string>Adds the Codebeat's ignore file</string>
+			<key>Name</key>
+			<string>Codebeat</string>
+			<key>SortOrder</key>
+			<integer>2</integer>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>NotPersisted</key>
+			<false/>
+			<key>Units</key>
+			<dict>
+
+				<key>true</key>
+				<dict>
+					<!-- Adding Files -->
+
+					<key>Definitions</key>
+					<dict>
+						<key>../.codebeatignore</key>
+						<dict>
+							<key>Path</key>
+							<string>.codebeatignore</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+					</dict>
+
+					<key>Nodes</key>
+					<array>
+						<string>../.codebeatignore</string>
+					</array>
+
+				</dict>
+
+				<key>false</key>
+				<dict>
+				</dict>
+
+			</dict>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

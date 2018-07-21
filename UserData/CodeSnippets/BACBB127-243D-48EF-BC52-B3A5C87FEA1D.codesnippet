@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>emirates-parsable-c</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class &lt;#ModelName#&gt; : Parsable {
+	
+	var &lt;#PropertyName#&gt;: String = ""
+	
+	func parsing(_ parser: Parser) {
+		&lt;#PropertyName#&gt; &lt;-&gt; parser["&lt;#JSONParam#&gt;"]
+	}
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BACBB127-243D-48EF-BC52-B3A5C87FEA1D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Emirates Parsable Class</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

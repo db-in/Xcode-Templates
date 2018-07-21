@@ -1,0 +1,29 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://git.emirates.com/scm/ema/cocoapodsspecs.git'
+
+inhibit_all_warnings!
+use_frameworks!
+platform :ios, '10.0'
+
+def test_pods
+  pod 'Quick'
+  pod 'Nimble'
+end
+
+target '___PACKAGENAME___Tests' do
+  test_pods
+end
+
+target 'ModuleIntegrationTests' do
+	test_pods
+	pod '___PACKAGENAME___', :path => './'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'SWRVE_DISABLE_LOGS=1']
+            config.build_settings['SWIFT_VERSION'] = '3'
+        end
+    end
+end

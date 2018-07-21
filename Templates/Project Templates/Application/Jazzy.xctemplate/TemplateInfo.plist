@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.Jazzy</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<!-- User Options -->
+
+	<key>Macros</key>
+	<dict>
+		<key>JAZZYSCRIPT</key>
+		<string>jazzy</string>
+	</dict>
+
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<key>../.jazzy.yaml</key>
+		<dict>
+			<key>Path</key>
+			<string>.jazzy.yaml</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>../.jazzy.yaml</string>
+	</array>
+
+	<!-- Targets and Frameworks -->
+
+	<key>Targets</key>
+	<array>
+
+		<dict>
+		</dict>
+
+		<dict>
+		</dict>
+
+		<dict>
+			<key>Name</key>
+			<string>Jazzy</string>
+			<key>TargetType</key>
+			<string>Aggregate</string>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.aggregateTarget</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>Jazzy</string>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string>___JAZZYSCRIPT___</string>
+				</dict>
+			</array>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

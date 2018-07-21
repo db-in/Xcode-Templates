@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Ancestors</key>
+	<array>
+		<string>com.micro-feature.Base</string>
+		<string>com.micro-feature.SwiftPackage</string>
+		<string>com.micro-feature.Jazzy</string>
+		<string>com.micro-feature.SwiftLint</string>
+		<string>com.micro-feature.TravisCodecov</string>
+		<string>com.micro-feature.Codebeat</string>
+		<string>com.micro-feature.Playground</string>
+	</array>
+
+	<key>Identifier</key>
+	<string>com.micro-feature.Component</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Concrete</key>
+	<true/>
+
+	<key>SortOrder</key>
+  	<string>0</string>
+
+	<key>Description</key>
+	<string>This template provides the defined structure for creating a new Core Micro-Feature.</string>
+
+	<!-- User Options -->
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>gitURL</string>
+			<key>Description</key>
+			<string>The component's git url.</string>
+			<key>EmptyReplacement</key>
+			<string>git@giturl.git</string>
+			<key>Name</key>
+			<string>Git URL</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+			<key>Placeholder</key>
+			<string>https://github.com/___ORGANIZATIONNAME___/___PACKAGENAME___</string>
+		</dict>
+
+	</array>
+
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<!-- Files -->
+
+		<key>../LICENSE</key>
+		<dict>
+			<key>Path</key>
+			<string>LICENSE</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>../Podfile</key>
+		<dict>
+			<key>Path</key>
+			<string>Podfile</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>../___PACKAGENAME___.podspec</key>
+		<dict>
+			<key>Path</key>
+			<string>___PACKAGENAME___.podspec</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>../README.md</key>
+		<dict>
+			<key>Path</key>
+			<string>README.md</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>../LICENSE</string>
+		<string>../Podfile</string>
+		<string>../___PACKAGENAME___.podspec</string>
+		<string>../README.md</string>
+	</array>
+
+	<!-- Targets and Frameworks -->
+
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>TargetIdentifier</key>
+            <string>com.micro-feature.MainTarget</string>
+        </dict>
+    </array>
+
+    <!-- Components -->
+
+	<key>Components</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>com.micro-feature.UnitTestsLink</string>
+			<key>Name</key>
+			<string>___PACKAGENAME___Tests</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>com.micro-feature.UnitTestsLink</string>
+			<key>Name</key>
+			<string>ModuleIntegrationTests</string>
+		</dict>
+	</array>
+
+</dict>
+</plist>

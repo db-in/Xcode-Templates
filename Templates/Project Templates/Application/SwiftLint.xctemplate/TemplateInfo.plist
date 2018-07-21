@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.SwiftLint</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<!-- Macros -->
+
+	<key>Macros</key>
+	<dict>
+		<key>SWIFTLINT</key>
+		<string>if which swiftlint >/dev/null; then
+fileCount=$(find ./___PACKAGENAME___ "(" -name "*.swift" ")" -maxdepth 1 -type f|wc -l)
+if [ $fileCount -gt 0 ]; then
+swiftlint
+fi
+else
+echo "Warning: SwiftLint is not installed correctly"
+fi</string>
+	</dict>
+
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<key>../.swiftlint.yml</key>
+		<dict>
+			<key>Path</key>
+			<string>.swiftlint.yml</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>../.swiftlint.yml</string>
+	</array>
+
+	<!-- User Options -->
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>swiftlint</string>
+			<key>Default</key>
+			<string>SwiftLint on every build</string>
+			<key>Description</key>
+			<string>Installs the SwiftLint script, which checks the code against our Code Guidelines compliance</string>
+			<key>Name</key>
+			<string>SwiftLint</string>
+			<key>SortOrder</key>
+			<integer>2</integer>
+			<key>Type</key>
+			<string>popup</string>
+			<key>NotPersisted</key>
+			<false/>
+			<key>Units</key>
+			<dict>
+
+				<key>SwiftLint on every build</key>
+				<dict>
+					<key>Targets</key>
+					<array>
+						<dict>
+							<key>Dependencies</key>
+							<array>
+								<string>1</string>
+							</array>
+						</dict>
+					</array>
+				</dict>
+
+				<key>SwiftLint on a separated target</key>
+				<dict>
+				</dict>
+
+			</dict>
+		</dict>
+
+	</array>
+
+	<!-- Targets and Frameworks -->
+
+	<key>Targets</key>
+	<array>
+
+		<dict>
+		</dict>
+
+		<dict>
+			<key>Name</key>
+			<string>SwiftLint</string>
+			<key>TargetType</key>
+			<string>Aggregate</string>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.aggregateTarget</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>SwiftLint</string>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string>___SWIFTLINT___</string>
+				</dict>
+			</array>
+		</dict>
+
+	</array>
+
+</dict>
+</plist>

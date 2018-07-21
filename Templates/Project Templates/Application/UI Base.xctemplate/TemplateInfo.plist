@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<!-- Header -->
+
+	<key>Identifier</key>
+	<string>com.micro-feature.UIBase</string>
+
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+
+	<!-- User Options -->
+
+	<key>Options</key>
+	<array>
+
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Description</key>
+			<string>Your new product&apos;s name.</string>
+			<key>EmptyReplacement</key>
+			<string>ProductName</string>
+			<key>Name</key>
+			<string>Framework's Name</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>organizationName</string>
+			<key>Name</key>
+			<string>Organization Name:</string>
+			<key>Description</key>
+			<string>Your company&apos;s name</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>___ORGANIZATIONNAME___</string>
+		</dict>
+
+		<dict>
+			<key>Identifier</key>
+			<string>bundleIdentifier</string>
+			<key>Default</key>
+			<string>com.micro-feature.___VARIABLE_productName:RFC1034Identifier___</string>
+			<key>Description</key>
+			<string>Your new product&apos;s bundle identifier.</string>
+			<key>Name</key>
+			<string>Bundle Identifier</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+
+	</array>
+
+	<!-- Project Settings -->
+
+	<key>Project</key>
+	<dict>
+		<key>Configurations</key>
+		<dict>
+			<key>Debug</key>
+			<dict>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<string>DEBUG</string>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+			</dict>
+			<key>Release</key>
+			<dict>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>NO</string>
+			</dict>
+		</dict>
+
+		<key>SharedSettings</key>
+		<dict>
+			<key>GCC_THUMB_SUPPORT</key>
+			<string>YES</string>
+			<key>GCC_C_LANGUAGE_STANDARD</key>
+			<string>gnu99</string>
+			<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+			<string>YES</string>
+			<key>GCC_WARN_UNUSED_VARIABLE</key>
+			<string>YES</string>
+			<key>GCC_VERSION</key>
+			<string>com.apple.compilers.llvm.clang.1_0</string>
+			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+			<string>latest_iphoneos</string>
+			<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+			<string>iPhone Developer</string>
+			<key>TARGETED_DEVICE_FAMILY</key>
+			<string>1,2</string>
+		</dict>
+
+		<key>SDK</key>
+		<string>iphoneos</string>
+	</dict>
+
+	<!-- Adding Files -->
+
+	<key>Definitions</key>
+	<dict>
+
+		<!-- Groups -->
+
+		<!-- Files -->
+
+		<key>Assets.xcassets</key>
+		<dict>
+			<key>Path</key>
+			<string>Assets.xcassets</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+		</dict>
+		<key>Main.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>Main.storyboard</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+		</dict>
+		<key>LaunchScreen.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+		</dict>
+
+		<key>Info.plist</key>
+		<dict>
+			<key>Path</key>
+			<string>Info.plist</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+
+		<key>AppDelegate.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>AppDelegate.swift</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+		</dict>
+
+		<key>Assets.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>Assets.swift</string>
+			<key>TargetIndices</key>
+			<array>
+				<string>0</string>
+			</array>
+		</dict>
+
+	</dict>
+
+	<key>Nodes</key>
+	<array>
+		<string>Assets.xcassets</string>
+		<string>Main.storyboard</string>
+		<string>LaunchScreen.storyboard</string>
+		<string>Info.plist</string>
+		<string>AppDelegate.swift</string>
+		<string>Assets.swift</string>
+	</array>
+
+
+	<!-- Targets and Frameworks -->
+
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.application</string>
+			<key>Name</key>
+			<string>___PACKAGENAME___</string>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Resources</string>
+				</dict>
+			</array>
+
+			<key>Configurations</key>
+			<dict>
+				<key>Debug</key>
+				<dict>
+					<key>COPY_PHASE_STRIP</key>
+					<string>NO</string>
+					<key>GCC_DYNAMIC_NO_PIC</key>
+					<string>NO</string>
+				</dict>
+				<key>Release</key>
+				<dict>
+					<key>COPY_PHASE_STRIP</key>
+					<string>YES</string>
+					<key>VALIDATE_PRODUCT</key>
+					<string>YES</string>
+				</dict>
+			</dict>
+
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>___VARIABLE_productName:RFC1034Identifier___/Info.plist</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+
+			<key>Frameworks</key>
+			<array>
+				<string>UIKit</string>
+			</array>
+
+		</dict>
+	</array>
+
+</dict>
+</plist>
