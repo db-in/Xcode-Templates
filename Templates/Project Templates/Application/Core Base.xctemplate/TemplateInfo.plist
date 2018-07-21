@@ -224,8 +224,6 @@
 				<string>$(TARGET_NAME)</string>
 				<key>INFOPLIST_FILE</key>
 				<string>___VARIABLE_productName:RFC1034Identifier___/Info.plist</string>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
