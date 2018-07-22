@@ -106,6 +106,12 @@
 			<string>YES</string>
 			<key>GCC_WARN_UNUSED_VARIABLE</key>
 			<string>YES</string>
+			<key>CLANG_ENABLE_MODULES</key>
+			<string>YES</string>
+			<key>CLANG_ENABLE_CODE_COVERAGE</key>
+			<string>YES</string>
+			<key>DEFINES_MODULE</key>
+			<string>YES</string>
 			<key>GCC_VERSION</key>
 			<string>com.apple.compilers.llvm.clang.1_0</string>
 			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
