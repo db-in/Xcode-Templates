@@ -6,27 +6,26 @@ This document defines guidelines and best practices that should be followed by a
 
 ## Contents
 
+1. [Golden Rules](#golden_rules)
 1. [Assets](#assets)
 1. [Coding](#coding)
 1. [Templates](#templates)
 1. [Localization](#localization)
 
+## Golden Rules
+
+1. ***No recursive loop***. (*font*: [Sean Parent](https://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning))
+1. ***ZERO accidental complication***. (*font*: [J. B. Rainsberger](https://www.youtube.com/watch?v=WSes_PexXcA))
+	* **Dead Agile**: Aknoledge and accept that estimations can't go well with agile development, so we should not estimate first but instead evaluate later on. *#noestimation* (font: [Dave Thomas](https://www.youtube.com/watch?v=a-BOSpxYJ9M))
+	* **Real Agile**: To get real estimations, TDD must be followed strictly (**think -> write test -> write just enough code -> refactor**).
+1. ***Testing primary goal is Fast Feedback***, just by excercising tests you can get a quick feedback on how you can improve your code, every other reason (safety, maintenance, covarege, stability) is merely a side effect. [Diney Bomfim](https://medium.com/@dineybomfim/the-best-of-testing-is-the-timely-fast-feedback-d9514e9d4550)
+1. ***Clarity, cohesion, coupling, complexity***. The original 2Cs (Coupling and Cohesion). Has been expanded to 3Cs, and can go up to 4Cs in Swift. (font: [Swift Guidelines](https://swift.org/documentation/api-design-guidelines/), [Istehad Chowdhurya and Mohammad Zulkernineb](https://www.sciencedirect.com/science/article/pii/S1383762110000615), [Greg Heo](https://www.skilled.io/u/swiftsummit/the-four-cs))
+
 ## Assets
 
-To take advantage of App Thining and ODR, all the assets are placed inside the [Assets catalogs][asset-catalogs].
-
-For vector images, use the [vector graphics (PDFs)][vector-assets] into the asset catalogs, and have Xcode automatically generate the bitmaps from that.
-
-    ├─ Assets.xcassets
-	    ├─ Flags
-	    ├─ Buttons
-	    ├─ Colors
-	    ├─ Backgrounds
-	    	    ├─ bkgAssetName
-
-
-[vector-assets]: http://martiancraft.com/blog/2014/09/vector-images-xcode6/
-[asset-catalogs]: https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/Recipe.html
+1. **Use PDF with vector for icons**.
+1. **Always use PNG for images** as per [Apple suggestion](https://developer.apple.com/library/archive/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/LoadingImages/LoadingImages.html#//apple_ref/doc/uid/TP40010156-CH17-SW9). If size is a concern, you can save a bit by using [TinyPNG](https://tinypng.com/), Photoshop or other kind of PNG optimizers and yet keep the lossless aspect, but never go through the JPG side of it for bundle assets. JPG are meant to downloadable images.
+1. Define the naming basics for your assets. (font: [Xcode Assets naming](https://github.com/dkhamsing/ios-asset-names)).
 
 ## Coding
 
@@ -34,43 +33,6 @@ All the coding style and best practices are enforced by [Swift Guidelines][swift
 
 [swift-guidelines]: https://swift.org/documentation/api-design-guidelines
 [apple-guidelines]: https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/CodingConventions.html
-
-### Scopes Declaration
-
-* Brackets start at the same line and finishes at a new line.
-* Use spaces before and after the return sign
-
-<pre style="background:#E6FFE5;border-color:#63D25C;border-left:6px #63D25C solid;">
-func foo() -> Bool {
-	// ...
-}
-</pre>
-
-<pre style="background:#F9E2E4;border-color:#F6B7BE;border-left:6px #EF5138 solid;">
-func foo ()->Bool
-{
-	// ...
-}
-</pre>
-
-### Colon & Semicolons
-
-* Spaces before and after the Type declarations.
-* Inside scope declarations use a space ONLY after the Type.
-
-<pre style="background:#E6FFE5;border-color:#63D25C;border-left:6px #63D25C solid;">
-class ClassA : NSObject {
-
-	var foo: String
-}
-</pre>
-
-<pre style="background:#F9E2E4;border-color:#F6B7BE;border-left:6px #EF5138 solid;">
-class ClassA: NSObject {
-
-	var foo:String
-}
-</pre>
 
 ### Closures/Blocks
 
@@ -185,21 +147,24 @@ var foo = anotherBoolVar ? (boolVar ? 1 : 2) : 3
 * Avoid ambiguities with any global scope
 
 <pre style="background:#E6FFE5;border-color:#63D25C;border-left:6px #63D25C solid;">
-func fooGlobal() {
+func globalFoo() {
 	// ...
 }
 
 class FooClass {
+
+    var aProperty = ""
+    
 	func foo() {
-		// ...
+		globalFoo()
 	}
 
 	func test() {
-		foo()
-
 		Dispatch.main.async {
 			self.foo()
 		}
+		
+		return aProperty()
 	}
 }
 </pre>
@@ -210,12 +175,15 @@ func foo() {
 }
 
 class Foo {
+
+    var aProperty = ""
+
 	func foo() {
-		// ...
+		foo()
 	}
 
-	func test() {
-		foo()
+	func test() -> String {
+		return self.nonConflictingVar
 	}
 }
 </pre>
@@ -551,87 +519,3 @@ describe("for every user") {
 	}
 }
 </pre>
-
-## Templates
-
-![File Template](assets/file_template1.png)
-![File Template](assets/file_template2.png)
-![File Template](assets/file_template3.png)
-
-The Xcode templates provides a starting point to enforce the Best Practices on this document. The Xcode templates are flexible enough to allow the creation of clusters/groups of files when needed. For example if a template for the interface requires a `.swift` + `.storyboard` file.
-
-* All files follows the guides defined in the templates (explained in details at bellow);
-* Templates defines various marks, which defines the ideal place in the files to insert chunks of code such as properties, protected functions, exposed functions, overriding functions, definitions, declarations, etc;
-* The **Major marks** are defined with 96 characters, a dash before and after;
-* The **Medium marks** are defined with 48 characters and a dash before;
-* The **Minor marks** are defined with 24 characters (no dash);
-
-In order to mantain a cleaner code, try to not exceed the limit of the **Major marks**, to avoid line breaks and long lines. This best practice comes from a community discussion over the most confortable way to work on the current screen monitors and eye studies about dynamic reading. It's the Swift adaptation of the widely known as 80 char limit.
-
-<pre><code style="font-size:8px;">
-// Imports at Top: import UIKit
-
-
-// MARK: - Definitions -
-
-
-// Global definitions:
-1) NotificationName
-2) CellName
-3) typealias
-4) etc
-
-
-// MARK: - Type -
-
-
-class Foo {
-
-
-// MARK: - Properties
-
-
-// All properties:
-1) private properties
-2) fileprivate properties
-3) internal properties (IBOutlet, includes overriden)
-4) public properties (includes overriden)
-
-
-// MARK: - Constructors
-
-
-// Constructors
-1) convinience
-2) designated
-3) required
-
-
-// MARK: - Overridden Methods
-
-
-// Methods:
-1) internal (IBAction, class/static)
-2) public (IBAction, class/static)
-2) open (IBAction, class/static)
-
-
-// MARK: - Protected Methods
-
-
-// Methods:
-1) private
-2) fileprivate
-3) class/static
-
-
-// MARK: - Exposed Methods
-
-
-// Methods:
-1) internal (IBAction, class/static)
-2) public (IBAction, class/static)
-2) open (IBAction, class/static)
-
-}
-</code></pre>

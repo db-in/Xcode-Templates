@@ -2,7 +2,7 @@
 
 ## Description
 
-This is part of the [iOS Best Practices and Guidelines](best-practices.md), check that document for further details. The **Xcode Templates & Tooling** will help you to install:
+This is part of the [iOS Best Practices and Guidelines](best-practices.md) document, check it for further details. The **Xcode Templates & Tooling** will help you to install:
 
 - Xocde Templates
 - Xcode Code Snippets
@@ -12,8 +12,6 @@ This is part of the [iOS Best Practices and Guidelines](best-practices.md), chec
 
 Double click on `install.command` file and enter your **machine admin password**.
 The installation process will copy and paste files in the right folders in order to have a local copy in the file system.
-
-Same process of installing. Running the `install.command` is required every time the git repository receives an update. The script will show you logs of the installation.
 
 ![Workspace](assets/terminal.png)
 
