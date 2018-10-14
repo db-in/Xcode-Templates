@@ -9,8 +9,6 @@ This document defines guidelines and best practices that should be followed by a
 1. [Golden Rules](#golden_rules)
 1. [Assets](#assets)
 1. [Coding](#coding)
-1. [Templates](#templates)
-1. [Localization](#localization)
 
 ## Golden Rules
 
