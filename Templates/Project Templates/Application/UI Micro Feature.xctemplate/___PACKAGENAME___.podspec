@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.author = '___ORGANIZATIONNAME___'
   s.source = { :git => "___VARIABLE_gitURL___", :tag => s.version, :submodules => true }
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 
   s.requires_arc = true
   s.ios.deployment_target = '10.0'

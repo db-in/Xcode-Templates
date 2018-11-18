@@ -82,6 +82,8 @@
 				<string>YES</string>
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.micro-feature.$(TARGET_NAME)</string>
 			</dict>
 		</dict>
 	</array>

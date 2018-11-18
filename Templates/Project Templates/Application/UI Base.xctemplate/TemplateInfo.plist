@@ -258,7 +258,7 @@
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
 				<key>SWIFT_VERSION</key>
-				<string>4.1</string>
+				<string>4.2</string>
 			</dict>
 
 			<key>Frameworks</key>
