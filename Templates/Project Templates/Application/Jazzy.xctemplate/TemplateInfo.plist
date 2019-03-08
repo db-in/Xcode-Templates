@@ -16,7 +16,7 @@
 	<key>Macros</key>
 	<dict>
 		<key>JAZZYSCRIPT</key>
-		<string>jazzy --podspec "${PROJECT_NAME}.podspec" --github_url "___VARIABLE_gitURL___"</string>
+		<string>jazzy -o "./docs" --podspec "${PROJECT_NAME}.podspec" --github_url "___VARIABLE_gitURL___" --clean</string>
 	</dict>
 
 	<!-- Targets and Frameworks -->
