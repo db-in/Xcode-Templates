@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode9.4
+osx_image: xcode11.1
 branches:
   only:
     - master
@@ -7,9 +7,9 @@ env:
   global:
   - WORKSPACE=___PACKAGENAME___.xcworkspace
   - SCHEME=___PACKAGENAME___
-  - DESTINATION='platform=iOS Simulator,name=iPhone X,OS=11.4'
+  - DESTINATION='platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.1'
 before_install:
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty --no-document --quiet
 script:
   - set -o pipefail
   - xcodebuild -version
