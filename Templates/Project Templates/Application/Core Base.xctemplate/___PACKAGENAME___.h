@@ -1,7 +1,4 @@
 //
-//  ___FILENAME___
-//  ___PROJECTNAME___
-//
 //  Created by ___VARIABLE_authors___ on ___DATE___.
 //
 
