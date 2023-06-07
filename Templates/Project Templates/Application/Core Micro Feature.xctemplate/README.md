@@ -6,6 +6,7 @@
 ![Version](https://img.shields.io/badge/swift-4.1-red.svg)
 [![Platform](https://img.shields.io/cocoapods/p/___PACKAGENAME___.svg?style=flat)](https://___ORGANIZATIONNAME___.github.io/___PACKAGENAME___)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/___PACKAGENAME___.svg)](https://img.shields.io/cocoapods/v/___PACKAGENAME___.svg)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift-Package-Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Description

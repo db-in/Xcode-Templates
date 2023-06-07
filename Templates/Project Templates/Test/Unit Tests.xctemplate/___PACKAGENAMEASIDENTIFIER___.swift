@@ -1,20 +1,18 @@
-/*
- *  ___FILENAME___
- *  ___PROJECTNAME___
- *
- *  Created by ___FULLUSERNAME___ on ___DATE___.
- *  Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
- */
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___VARIABLE_authors___ on ___DATE___.
+//
 
-import Quick
-import Nimble
+import XCTest
 @testable import ___PROJECTNAME___
 
 // MARK: - Definitions -
 
 // MARK: - Type -
 
-class ___FILEBASENAMEASIDENTIFIER___ : QuickSpec {
+class ___FILEBASENAMEASIDENTIFIER___ : ___VARIABLE_testSubclass___ {
 
 // MARK: - Properties
 
@@ -24,16 +22,9 @@ class ___FILEBASENAMEASIDENTIFIER___ : QuickSpec {
 
 // MARK: - Overridden Methods
 
-	override func spec() {
-		
-		describe("WHAT is being tested") {
-			
-			context("HOW is going to be tested, under which state/condition") {
-				
-				it("WHY is this test being done, explain the expected behavior/result") {
-					expect("string").to(equal("string"))
-				}
-			}
-		}
+	func test_WHAT_HOW_WHY() {
+		// WHAT is being tested,
+		// HOW is it being tested (under which state/condition) and
+		// WHY is it being tested.
 	}
 }

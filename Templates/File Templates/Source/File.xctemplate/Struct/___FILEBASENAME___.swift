@@ -1,10 +1,9 @@
-/*
- *	___FILENAME___
- *	___PROJECTNAME___
- *
- *	Created by ___VARIABLE_authors___ on ___DATE___.
- *	Copyright ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
- */
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___VARIABLE_authors___ on ___DATE___.
+//
 
 import Foundation
 
